@@ -6,7 +6,11 @@
     <title>Unity WebGL Player | walkers</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-             UnityLoader.instantiate("unityContainer", "Build/build.json");
+             UnityLoader.instantiate("unityContainer", "Build/build.json", {
+    Module: {
+        "webglContextAttributes": {"preserveDrawingBuffer": true},
+    }
+});
     </script>
   </head>
   <body>
